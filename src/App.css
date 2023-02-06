@@ -1,38 +1,142 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(218, 218, 218);
+}
+
+#app-info {
+  padding-bottom: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#app-title {
+  font-size: 2em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#copyright,
+#desc,
+#credit {
+  font-size: 0.8rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#copyright a,
+#credit a {
+  color: inherit;
+}
+
+#container {
+  background-color: rgb(54, 46, 83);
+  color: rgb(218, 218, 218);
+  box-shadow: 0px 10px 10px -10px gray;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  height: 100%;
+}
+
+#country-display {
+  text-align: center;
+  font-size: 4rem;
+  text-shadow: 0px 0px 5px rgb(23, 19, 37);
+  letter-spacing: 1rem;
+  padding-bottom: 1rem;
+}
+
+.input-container {
+  display: flex;
+  /* background-color: red; */
+}
+
+.input-container p {
+  margin: 0;
+}
+
+.input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.input-box {
+  margin: 0.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgb(218, 218, 218);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.3rem;
+  /* border: 2px solid rgb(54, 46, 83); */
+  border: none;
+  /* border-bottom: 1px solid rgb(34, 29, 53); */
+  box-shadow: 0px 1px 1px -1px rgb(34, 29, 53);
+  background-color:rgb(71, 65, 98) ;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#letter-input {
+  width: 4rem;
+}
+
+button, input {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.enter {
+  background-color: #3d88c9;
+  border: none;
+  border-radius: 0.2rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  box-shadow: 0px 1px 1px -1px black;
+  transition-property: background-color;
+  transition-duration: 150ms;
+}
+
+.enter:hover {
+  cursor: pointer;
+  background-color: #306ca1;
+}
+
+#new-button {
+  margin-top: 2rem;
+  padding: 0.7rem;
+  background-color: #48ba70;
+  border: none;
+  border-radius: 0.2rem;
+  box-shadow: 0px 2px 1px -1px black;
+  transition-property: background-color;
+  transition-duration: 150ms;
+}
+
+#new-button:hover {
+  cursor: pointer;
+  background-color: #358752;
+}
+
+@media (max-width: 415px) {
+  html {
+    font-size: 14px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 360px) {
+  .input-container {
+    flex-direction: column;
   }
 }
